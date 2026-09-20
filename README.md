@@ -23,10 +23,52 @@ Ibadan North Local Government Area, Oyo State, Nigeria.
 - **Road Network:** OpenStreetMap data downloaded through Geofabrik  
   https://download.geofabrik.de/africa/nigeria.html
 
-## Planned Output
+## Analysis
 
-The project will calculate the distance from settlement areas to their nearest mapped road and identify settlement areas with the greatest road-proximity gaps within Ibadan North LGA.
+The project calculates the distance from each settlement area to its nearest mapped OSM road/path feature.
+
+The analysis uses:
+
+**EPSG:32631 — WGS 84 / UTM Zone 31N**
+
+Distances are calculated in metres.
+
+## Current Results
+
+The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
+
+Observed nearest-mapped-feature distances range from **0 m to approximately 185.05 m**.
+
+- **1,978 settlement blocks** have a distance of 0 m.
+- **51 settlement blocks** have a non-zero distance.
+- The maximum observed distance is approximately **185.05 m**.
+
+## Analysis-Ready Output
+
+The final analysis-ready GeoPackage is:
+
+`data/ibadan_north_analysis_v2.gpkg`
+
+It contains the settlement features and the calculated nearest-road distance field.
 
 ## Project Status
 
-Project question selected, datasets checked and acquired, and project repository established.
+**Week 3 — Data preparation completed.**
+
+The project datasets were reprojected to EPSG:32631, quality checks were completed, and an analysis-ready GeoPackage was created.
+
+## Repository Structure
+
+```text
+ibadan-north-road-access/
+├── README.md
+├── data/
+│   ├── README.md
+│   ├── Ibadan_North_LGA.geojson
+│   ├── ibadan_north_roads.gpkg
+│   ├── ibadan_north_settlements.gpkg
+│   └── ibadan_north_analysis_v2.gpkg
+└── docs/
+    ├── 01-project-brief.md
+    ├── 02-data-notes.md
+    └── 03-data-preparation.md
