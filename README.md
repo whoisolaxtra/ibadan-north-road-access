@@ -29,4 +29,4 @@ The project will calculate the distance from settlement areas to their nearest m
 
 ## Project Status
 
-Week 1 — Project question selected, datasets checked and acquired, and project repository established.
+Project question selected, datasets checked and acquired, and project repository established.
