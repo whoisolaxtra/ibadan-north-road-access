@@ -29,11 +29,11 @@ The project calculates the distance from each settlement area to its nearest map
 
 The analysis uses:
 
-**EPSG:32631 - WGS 84 / UTM Zone 31N**
+**EPSG:32631 — WGS 84 / UTM Zone 31N**
 
 Distances are calculated in metres.
 
-### Week 3 - Nearest-Road Distance Analysis
+### Week 3 — Nearest-Road Distance Analysis
 
 The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
 
@@ -45,7 +45,7 @@ Observed nearest-mapped-feature distances range from **0 m to approximately 185.
 
 The Week 3 analysis provides a continuous measure of settlement proximity to the mapped road/path network.
 
-## Week 4 - Spatial Analysis
+## Week 4 — Spatial Analysis
 
 Week 4 focused on a **100 m road-proximity analysis** to examine the relationship between mapped roads and settlement areas.
 
@@ -112,9 +112,17 @@ The Week 4 spatial analysis outputs are:
 - `data/ibadan_north_settlements_within_100m.gpkg`
 - `data/ibadan_north_settlements_outside_100m.gpkg`
 
+## Map Output
+
+The final Week 4 map visualising the 100 m road-proximity analysis is available at:
+
+`maps/week4-road-accessibility-100m.png`
+
+The map shows the mapped road network, 100 m road-proximity zone, settlement areas, and the three settlement areas identified outside the 100 m threshold.
+
 ## Project Status
 
-**Week 4 - Spatial analysis completed.**
+**Week 4 — Spatial analysis completed.**
 
 The project has progressed from data preparation and nearest-road distance analysis to a threshold-based spatial analysis of settlement proximity to mapped roads.
 
@@ -135,7 +143,6 @@ Detailed project documentation is organised by week:
 ibadan-north-road-access/
 ├── README.md
 ├── data/
-│   ├── README.md
 │   ├── Ibadan_North_LGA.geojson
 │   ├── ibadan_north_roads.gpkg
 │   ├── ibadan_north_settlements.gpkg
@@ -144,8 +151,10 @@ ibadan-north-road-access/
 │   ├── ibadan_north_road_buffer_100m_dissolved.gpkg
 │   ├── ibadan_north_settlements_within_100m.gpkg
 │   └── ibadan_north_settlements_outside_100m.gpkg
-└── docs/
-    ├── 01-project-brief.md
-    ├── 02-data-notes.md
-    ├── 03-data-preparation.md
-    └── 04-spatial-analysis.md
+├── docs/
+│   ├── 01-project-brief.md
+│   ├── 02-data-notes.md
+│   ├── 03-data-preparation.md
+│   └── 04-spatial-analysis.md
+└── maps/
+    └── week4-road-accessibility-100m.png
