@@ -33,7 +33,7 @@ The analysis uses:
 
 Distances are calculated in metres.
 
-## Current Results
+### Week 3 — Nearest-Road Distance Analysis
 
 The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
 
@@ -43,19 +43,91 @@ Observed nearest-mapped-feature distances range from **0 m to approximately 185.
 - **51 settlement blocks** have a non-zero distance.
 - The maximum observed distance is approximately **185.05 m**.
 
+The Week 3 analysis provides a continuous measure of settlement proximity to the mapped road/path network.
+
+## Week 4 — Spatial Analysis
+
+Week 4 focused on a **100 m road-proximity analysis** to examine the relationship between mapped roads and settlement areas.
+
+### Spatial Operation
+
+A 100 m buffer was created around the mapped OSM road network using **EPSG:32631 — WGS 84 / UTM Zone 31N**.
+
+The road dataset was filtered to exclude:
+
+- `path`
+- `footway`
+- `track`
+
+This left **3,026 mapped road features** for the Week 4 buffer analysis.
+
+The 100 m buffer was dissolved to create a continuous road-proximity zone and then intersected with the settlement areas.
+
+### Week 4 Results
+
+The original settlement dataset contained **2,029 settlement areas**.
+
+| Measure | Result |
+|---|---:|
+| Total settlement areas | 2,029 |
+| Settlement areas within/intersecting 100 m | 2,026 |
+| Settlement areas outside 100 m | 3 |
+| Within 100 m | 99.85% |
+| Outside 100 m | 0.15% |
+
+The three settlement areas outside the 100 m road-proximity zone were independently identified using a spatial `disjoint` selection and exported as a separate layer.
+
+### Validation
+
+The 100 m buffer was checked for geometry validity before further analysis.
+
+- **Valid geometries:** 3,026
+- **Invalid geometries:** 0
+- **Errors:** 0
+
+The settlement result was also independently checked by selecting settlement areas that were disjoint from the dissolved 100 m buffer. This identified the same **3 settlement areas** outside the threshold.
+
+### Interpretation
+
+The analysis identified **2,026 of the 2,029 mapped settlement areas** as intersecting the 100 m road-proximity zone.
+
+Only **3 settlement areas (0.15%)** were identified outside the 100 m threshold.
+
+This result represents proximity to the **mapped OSM road dataset** and should not be interpreted as a complete measure of physical road accessibility. The result is dependent on the completeness, positional accuracy and classification of the mapped road data.
+
 ## Analysis-Ready Output
 
-The final analysis-ready GeoPackage is:
+The Week 3 analysis-ready GeoPackage is:
 
 `data/ibadan_north_analysis_v2.gpkg`
 
 It contains the settlement features and the calculated nearest-road distance field.
 
+## Week 4 Outputs
+
+The Week 4 spatial analysis outputs are:
+
+- `data/ibadan_north_road_buffer_100m.gpkg`
+- `data/ibadan_north_road_buffer_100m_dissolved.gpkg`
+- `data/ibadan_north_settlements_within_100m.gpkg`
+- `data/ibadan_north_settlements_outside_100m.gpkg`
+
 ## Project Status
 
-**Week 3 — Data preparation completed.**
+**Week 4 — Spatial analysis completed.**
 
-The project datasets were reprojected to EPSG:32631, quality checks were completed, and an analysis-ready GeoPackage was created.
+The project has progressed from data preparation and nearest-road distance analysis to a threshold-based spatial analysis of settlement proximity to mapped roads.
+
+The Week 4 workflow included road filtering, 100 m buffering, geometry validation, buffer dissolution, settlement intersection and independent validation of settlement areas outside the 100 m threshold.
+
+## Documentation
+
+Detailed project documentation is organised by week:
+
+- [`docs/01-project-brief.md`](docs/01-project-brief.md)
+- [`docs/02-data-notes.md`](docs/02-data-notes.md)
+- [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
+- [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
 
 ## Repository Structure
 
@@ -67,8 +139,13 @@ ibadan-north-road-access/
 │   ├── Ibadan_North_LGA.geojson
 │   ├── ibadan_north_roads.gpkg
 │   ├── ibadan_north_settlements.gpkg
-│   └── ibadan_north_analysis_v2.gpkg
+│   ├── ibadan_north_analysis_v2.gpkg
+│   ├── ibadan_north_road_buffer_100m.gpkg
+│   ├── ibadan_north_road_buffer_100m_dissolved.gpkg
+│   ├── ibadan_north_settlements_within_100m.gpkg
+│   └── ibadan_north_settlements_outside_100m.gpkg
 └── docs/
     ├── 01-project-brief.md
     ├── 02-data-notes.md
-    └── 03-data-preparation.md
+    ├── 03-data-preparation.md
+    └── 04-spatial-analysis.md
