@@ -45,7 +45,7 @@ Observed nearest-mapped-feature distances range from **0 m to approximately 185.
 
 The Week 3 analysis provides a continuous measure of settlement proximity to the mapped road/path network.
 
-## Week 4 — Spatial Analysis
+## Week 4 - Spatial Analysis
 
 Week 4 focused on a **100 m road-proximity analysis** to examine the relationship between mapped roads and settlement areas.
 
@@ -122,7 +122,7 @@ The map shows the mapped road network, 100 m road-proximity zone, settlement are
 
 ## Project Status
 
-**Week 4 — Spatial analysis completed.**
+**Week 4 - Spatial analysis completed.**
 
 The project has progressed from data preparation and nearest-road distance analysis to a threshold-based spatial analysis of settlement proximity to mapped roads.
 
