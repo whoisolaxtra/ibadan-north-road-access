@@ -29,11 +29,11 @@ The project examines settlement proximity to the mapped road network using both 
 
 The analysis uses:
 
-**EPSG:32631 — WGS 84 / UTM Zone 31N**
+**EPSG:32631 - WGS 84 / UTM Zone 31N**
 
 Distances are calculated in metres.
 
-### Week 3 — Nearest-Road Distance Analysis
+### Week 3 - Nearest-Road Distance Analysis
 
 The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
 
@@ -48,7 +48,7 @@ The Week 3 analysis provides a continuous measure of settlement proximity to the
 **Documentation:**  
 [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
 
-## Week 4 — Spatial Analysis
+## Week 4 - Spatial Analysis
 
 Week 4 focused on a **100 m road-proximity analysis** to examine the relationship between mapped roads and settlement areas.
 
@@ -138,7 +138,7 @@ The summary connects the project from:
 
 ## Project Status
 
-**Month 1 — Four-week project completed.**
+**Month 1 - Four-week project completed.**
 
 The project progressed from project definition and data acquisition through data preparation, nearest-road distance analysis, threshold-based spatial analysis, validation and visualisation.
 
@@ -148,11 +148,11 @@ The Week 4 workflow included road filtering, 100 m buffering, geometry validatio
 
 Detailed project documentation is organised by week:
 
-- **Week 1 — Project Brief:** [`docs/01-project-brief.md`](docs/01-project-brief.md)
-- **Week 2 — Data Notes:** [`docs/02-data-notes.md`](docs/02-data-notes.md)
-- **Week 3 — Data Preparation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
-- **Week 4 — Spatial Analysis:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
-- **Month 1 — Integration Summary:** [`month-1-summary.md`](month-1-summary.md)
+- **Week 1 - Project Brief:** [`docs/01-project-brief.md`](docs/01-project-brief.md)
+- **Week 2 - Data Notes:** [`docs/02-data-notes.md`](docs/02-data-notes.md)
+- **Week 3 - Data Preparation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
+- **Week 4 - Spatial Analysis:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
+- **Month 1 - Integration Summary:** [`month-1-summary.md`](month-1-summary.md)
 
 ## Repository Structure
 
