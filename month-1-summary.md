@@ -1,4 +1,4 @@
-# Month 1 Summary — Road Accessibility to Settlement Areas in Ibadan North LGA
+# Month 1 Summary - Road Accessibility to Settlement Areas in Ibadan North LGA
 
 ## Project Question
 
@@ -12,7 +12,7 @@ The four weeks were designed as one continuous workflow rather than as separate 
 
 **Project question → Data acquisition → Data preparation → Spatial analysis → Result**
 
-## Week 1 — Project Definition
+## Week 1 - Project Definition
 
 The project began by defining the study area, research question, datasets and proposed analytical approach.
 
@@ -22,7 +22,7 @@ The initial project brief established the research question and identified the m
 
 **Documentation:** [`docs/01-project-brief.md`](docs/01-project-brief.md)
 
-## Week 2 — Data Acquisition and Assessment
+## Week 2 - Data Acquisition and Assessment
 
 The required spatial datasets were acquired and assessed:
 
@@ -34,13 +34,13 @@ The extracted datasets were checked for their spatial coverage, geometry types, 
 
 **Documentation:** [`docs/02-data-notes.md`](docs/02-data-notes.md)
 
-## Week 3 — Data Preparation
+## Week 3 - Data Preparation
 
 The datasets were prepared for spatial analysis.
 
 The working layers were transformed to:
 
-**EPSG:32631 — WGS 84 / UTM Zone 31N**
+**EPSG:32631 - WGS 84 / UTM Zone 31N**
 
 This projected coordinate reference system allowed distances to be calculated in metres.
 
@@ -56,7 +56,7 @@ Observed nearest-mapped-feature distances ranged from **0 m to approximately 185
 
 **Documentation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
 
-## Week 4 — Spatial Analysis
+## Week 4 - Spatial Analysis
 
 The project then moved from continuous nearest-road distance to a threshold-based spatial analysis.
 
