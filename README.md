@@ -25,15 +25,15 @@ Ibadan North Local Government Area, Oyo State, Nigeria.
 
 ## Analysis
 
-The project calculates the distance from each settlement area to its nearest mapped OSM road/path feature.
+The project examines settlement proximity to the mapped road network using both continuous nearest-road distance and a 100 m road-proximity threshold.
 
 The analysis uses:
 
-**EPSG:32631 - WGS 84 / UTM Zone 31N**
+**EPSG:32631 — WGS 84 / UTM Zone 31N**
 
 Distances are calculated in metres.
 
-### Week 3 - Nearest-Road Distance Analysis
+### Week 3 — Nearest-Road Distance Analysis
 
 The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
 
@@ -45,7 +45,10 @@ Observed nearest-mapped-feature distances range from **0 m to approximately 185.
 
 The Week 3 analysis provides a continuous measure of settlement proximity to the mapped road/path network.
 
-## Week 4 - Spatial Analysis
+**Documentation:**  
+[`docs/03-data-preparation.md`](docs/03-data-preparation.md)
+
+## Week 4 — Spatial Analysis
 
 Week 4 focused on a **100 m road-proximity analysis** to examine the relationship between mapped roads and settlement areas.
 
@@ -95,6 +98,9 @@ Only **3 settlement areas (0.15%)** were identified outside the 100 m threshold.
 
 This result represents proximity to the **mapped OSM road dataset** and should not be interpreted as a complete measure of physical road accessibility. The result is dependent on the completeness, positional accuracy and classification of the mapped road data.
 
+**Documentation:**  
+[`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
+
 ## Analysis-Ready Output
 
 The Week 3 analysis-ready GeoPackage is:
@@ -116,15 +122,25 @@ The Week 4 spatial analysis outputs are:
 
 The final Week 4 map visualising the 100 m road-proximity analysis is available at:
 
-`maps/week4-road-accessibility-100m.png`
+[`maps/week4-road-accessibility-100m.png`](maps/week4-road-accessibility-100m.png)
 
 The map shows the mapped road network, 100 m road-proximity zone, settlement areas, and the three settlement areas identified outside the 100 m threshold.
 
+## Month 1 Integration Summary
+
+The complete four-week project story, results and outputs are summarised in:
+
+[`month-1-summary.md`](month-1-summary.md)
+
+The summary connects the project from:
+
+**Project question → Data acquisition → Data preparation → Spatial analysis → Result**
+
 ## Project Status
 
-**Week 4 - Spatial analysis completed.**
+**Month 1 — Four-week project completed.**
 
-The project has progressed from data preparation and nearest-road distance analysis to a threshold-based spatial analysis of settlement proximity to mapped roads.
+The project progressed from project definition and data acquisition through data preparation, nearest-road distance analysis, threshold-based spatial analysis, validation and visualisation.
 
 The Week 4 workflow included road filtering, 100 m buffering, geometry validation, buffer dissolution, settlement intersection and independent validation of settlement areas outside the 100 m threshold.
 
@@ -132,16 +148,18 @@ The Week 4 workflow included road filtering, 100 m buffering, geometry validatio
 
 Detailed project documentation is organised by week:
 
-- [`docs/01-project-brief.md`](docs/01-project-brief.md)
-- [`docs/02-data-notes.md`](docs/02-data-notes.md)
-- [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
-- [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
+- **Week 1 — Project Brief:** [`docs/01-project-brief.md`](docs/01-project-brief.md)
+- **Week 2 — Data Notes:** [`docs/02-data-notes.md`](docs/02-data-notes.md)
+- **Week 3 — Data Preparation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
+- **Week 4 — Spatial Analysis:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
+- **Month 1 — Integration Summary:** [`month-1-summary.md`](month-1-summary.md)
 
 ## Repository Structure
 
 ```text
 ibadan-north-road-access/
 ├── README.md
+├── month-1-summary.md
 ├── data/
 │   ├── Ibadan_North_LGA.geojson
 │   ├── ibadan_north_roads.gpkg
