@@ -1,4 +1,4 @@
-# Week 4 — Spatial Analysis
+# Week 4 - Spatial Analysis
 
 ## Spatial Analysis Objective
 
