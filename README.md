@@ -54,7 +54,7 @@ Week 4 focused on a **100 m road-proximity analysis** to examine the relationshi
 
 ### Spatial Operation
 
-A 100 m buffer was created around the mapped OSM road network using **EPSG:32631 — WGS 84 / UTM Zone 31N**.
+A 100 m buffer was created around the mapped OSM road network using **EPSG:32631 - WGS 84 / UTM Zone 31N**.
 
 The road dataset was filtered to exclude:
 
