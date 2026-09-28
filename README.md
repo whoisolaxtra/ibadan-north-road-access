@@ -29,11 +29,11 @@ The project calculates the distance from each settlement area to its nearest map
 
 The analysis uses:
 
-**EPSG:32631 — WGS 84 / UTM Zone 31N**
+**EPSG:32631 - WGS 84 / UTM Zone 31N**
 
 Distances are calculated in metres.
 
-### Week 3 — Nearest-Road Distance Analysis
+### Week 3 - Nearest-Road Distance Analysis
 
 The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
 
