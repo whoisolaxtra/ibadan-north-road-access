@@ -29,11 +29,11 @@ The project calculates the distance from each settlement area to its nearest map
 
 The analysis uses:
 
-**EPSG:32631 — WGS 84 / UTM Zone 31N**
+**EPSG:32631 - WGS 84 / UTM Zone 31N**
 
 Distances are calculated in metres.
 
-### Week 3 — Nearest-Road Distance Analysis
+### Week 3 - Nearest-Road Distance Analysis
 
 The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
 
@@ -45,7 +45,7 @@ Observed nearest-mapped-feature distances range from **0 m to approximately 185.
 
 The Week 3 analysis provides a continuous measure of settlement proximity to the mapped road/path network.
 
-## Week 4 — Spatial Analysis
+## Week 4 - Spatial Analysis
 
 Week 4 focused on a **100 m road-proximity analysis** to examine the relationship between mapped roads and settlement areas.
 
@@ -114,7 +114,7 @@ The Week 4 spatial analysis outputs are:
 
 ## Project Status
 
-**Week 4 — Spatial analysis completed.**
+**Week 4 - Spatial analysis completed.**
 
 The project has progressed from data preparation and nearest-road distance analysis to a threshold-based spatial analysis of settlement proximity to mapped roads.
 
