@@ -32,11 +32,11 @@ EPSG:32631 uses metres as its linear unit and is therefore appropriate for the p
 
 The source and extracted datasets were initially stored in different coordinate reference systems:
 
-- LGA boundary — EPSG:4326
-- OSM road network — EPSG:4326
-- GRID3 settlement extents — EPSG:3857
+- LGA boundary - EPSG:4326
+- OSM road network - EPSG:4326
+- GRID3 settlement extents - EPSG:3857
 
-The datasets were reprojected to **EPSG:32631 — WGS 84 / UTM Zone 31N** for consistent spatial analysis and distance measurement.
+The datasets were reprojected to **EPSG:32631 - WGS 84 / UTM Zone 31N** for consistent spatial analysis and distance measurement.
 
 The following working layers were created:
 
@@ -46,7 +46,7 @@ The following working layers were created:
 
 All three working layers were verified in QGIS as EPSG:32631, with metres as the unit of measurement.
 
-The original source/extract datasets were retained unchanged.
+The source/extract datasets were retained unchanged.
 
 ---
 
@@ -141,13 +141,13 @@ The prepared analysis layer was created after reprojection and nearest-road dist
 
 The analysis layer contains **2,029 settlement features** and includes the original settlement attributes together with the nearest-road distance field.
 
-The final working CRS is **EPSG:32631 — WGS 84 / UTM Zone 31N**, with distances expressed in metres.
+The final working CRS is **EPSG:32631 - WGS 84 / UTM Zone 31N**, with distances expressed in metres.
 
 The distance field is:
 
 `distance`
 
-The original source/extract files were retained separately so that the analysis can be reproduced without overwriting the source data.
+The source/extract files were retained separately so that the analysis can be reproduced without overwriting the source data.
 
 ---
 
