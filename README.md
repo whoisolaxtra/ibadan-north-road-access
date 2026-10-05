@@ -154,25 +154,31 @@ Detailed project documentation is organised by week:
 - **Week 4 - Spatial Analysis:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
 - **Month 1 - Integration Summary:** [`month-1-summary.md`](month-1-summary.md)
 
-## Repository Structure
+## Month 2 - Development Environment Setup
+
+### Week 5 - Python Development Environment
+
+Week 5 marks the beginning of the development phase of the project.
+
+A Python development environment was configured using:
+
+- Python 3.14.8
+- Visual Studio Code
+- `uv` Python package and project manager
+- Python extension for Visual Studio Code
+
+The project repository was opened as a trusted workspace in Visual Studio Code.
+
+### Environment Verification
+
+The Python environment was verified from the project directory using:
 
 ```text
-ibadan-north-road-access/
-├── README.md
-├── month-1-summary.md
-├── data/
-│   ├── Ibadan_North_LGA.geojson
-│   ├── ibadan_north_roads.gpkg
-│   ├── ibadan_north_settlements.gpkg
-│   ├── ibadan_north_analysis_v2.gpkg
-│   ├── ibadan_north_road_buffer_100m.gpkg
-│   ├── ibadan_north_road_buffer_100m_dissolved.gpkg
-│   ├── ibadan_north_settlements_within_100m.gpkg
-│   └── ibadan_north_settlements_outside_100m.gpkg
-├── docs/
-│   ├── 01-project-brief.md
-│   ├── 02-data-notes.md
-│   ├── 03-data-preparation.md
-│   └── 04-spatial-analysis.md
-└── maps/
-    └── week4-road-accessibility-100m.png
+python --version
+Python 3.14.8
+
+pwd
+C:\Users\Admin\dev\ibadan-north-road-access
+
+python hello.py
+My setup works
