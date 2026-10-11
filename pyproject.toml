@@ -1,0 +1,16 @@
+[project]
+name = "ibadan-north-road-access"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas>=3.0.6",
+]
+
+[project.scripts]
+ibadan-north-road-access = "ibadan_north_road_access:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
