@@ -128,7 +128,7 @@ The map shows the mapped road network, 100 m road-proximity zone, settlement are
 
 ## Month 1 Integration Summary
 
-The complete four-week project story, results and outputs are summarised in:
+The complete four-week project story, results, and outputs are summarised in:
 
 [`month-1-summary.md`](month-1-summary.md)
 
@@ -142,7 +142,7 @@ The summary connects the project from:
 
 The project progressed from project definition and data acquisition through data preparation, nearest-road distance analysis, threshold-based spatial analysis, validation, and visualisation.
 
-The Week 4 workflow included road filtering, 100 m buffering, geometry validation, buffer dissolution, settlement intersection and independent validation of settlement areas outside the 100 m threshold.
+The Week 4 workflow included road filtering, 100 m buffering, geometry validation, buffer dissolution, settlement intersection, and independent validation of settlement areas outside the 100 m threshold.
 
 ## Documentation
 
@@ -272,6 +272,55 @@ The screenshot records the VS Code editor and terminal showing the verification 
 
 **Week 6 status:** Pandas installed, verification script executed successfully, and project files uploaded to GitHub.
 
+## Week 7 - Python Data Analysis
+
+Week 7 applies Python fundamentals to a small dataset of settlement wards and their areas. The practical uses variables, data types, loops, conditional statements, list indexing, type conversion, and basic error handling.
+
+### Dataset
+
+The input file, `wards.csv`, contains four wards and their areas in square kilometres.
+
+| Ward | Area (km²) |
+|---|---:|
+| Agodi | 12.4 |
+| Bodija | 8.1 |
+| Sabo | 5.7 |
+| Mokola | 9.3 |
+
+### Analysis Workflow
+
+The `analyse.py` script:
+
+1. Opens and reads `wards.csv`.
+2. Uses `lines[1:]` to skip the CSV header row.
+3. Splits each data row into its ward name and area.
+4. Converts the area value from text to a floating-point number using `float()`.
+5. Classifies each ward as `large` when its area is greater than 9 km², or `small` otherwise.
+6. Prints the classification for each ward.
+
+### Results
+
+The script produces the following output:
+
+```text
+Agodi is large
+Bodija is small
+Sabo is small
+Mokola is large
+```
+
+The classification uses a threshold of **greater than 9 km²**. An area equal to 9 km² would therefore be classified as small.
+
+### Week 7 Deliverables
+
+The practical files and evidence are:
+
+- [`analyse.py`](analyse.py) - Python analysis script.
+- [`wards.csv`](wards.csv) - input dataset.
+- [`screenshots/week7.png`](screenshots/week7.png) - screenshot showing the code and successful terminal output.
+
+**Week 7 status:** The script runs successfully and classifies all four wards.
+
 ## Repository Structure
 
 The repository contains the Month 1 spatial analysis documentation and outputs, together with the Month 2 Python development files.
@@ -284,13 +333,16 @@ ibadan-north-road-access/
 │   └── week4-road-accessibility-100m.png
 ├── screenshots/
 │   ├── week5.png
-│   └── week6.png
+│   ├── week6.png
+│   └── week7.png
 ├── README.md
+├── analyse.py
 ├── check.py
 ├── hello.py
 ├── month-1-summary.md
 ├── pyproject.toml
-└── uv.lock
+├── uv.lock
+└── wards.csv
 ```
 
 The `.venv` directory is maintained locally and is not included in the GitHub repository.
