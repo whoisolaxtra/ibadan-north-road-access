@@ -31,11 +31,11 @@ The project examines settlement proximity to the mapped road network using conti
 
 The spatial analysis uses:
 
-**EPSG:32631 - WGS 84 / UTM Zone 31N**
+**EPSG:32631 — WGS 84 / UTM Zone 31N**
 
 Distances are calculated in metres.
 
-### Week 3 - Nearest-Road Distance Analysis
+### Week 3 — Nearest-Road Distance Analysis
 
 The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
 
@@ -49,7 +49,7 @@ The Week 3 analysis provides a continuous measure of settlement proximity to the
 
 **Documentation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
 
-## Week 4 - Spatial Analysis
+## Week 4 — Spatial Analysis
 
 Week 4 focused on a **100 m road-proximity analysis** to examine the relationship between mapped roads and settlement areas.
 
@@ -138,7 +138,7 @@ The summary connects the project from:
 
 ## Project Status
 
-**Month 1 - Four-week project completed.**
+**Month 1 — Four-week project completed.**
 
 The project progressed from project definition and data acquisition through data preparation, nearest-road distance analysis, threshold-based spatial analysis, validation, and visualisation.
 
@@ -148,17 +148,19 @@ The Week 4 workflow included road filtering, 100 m buffering, geometry validatio
 
 Detailed Month 1 project documentation is organised by week:
 
-- **Week 1 - Project Brief:** [`docs/01-project-brief.md`](docs/01-project-brief.md)
-- **Week 2 - Data Notes:** [`docs/02-data-notes.md`](docs/02-data-notes.md)
-- **Week 3 - Data Preparation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
-- **Week 4 - Spatial Analysis:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
-- **Month 1 - Integration Summary:** [`month-1-summary.md`](month-1-summary.md)
+- **Week 1 — Project Brief:** [`docs/01-project-brief.md`](docs/01-project-brief.md)
+- **Week 2 — Data Notes:** [`docs/02-data-notes.md`](docs/02-data-notes.md)
+- **Week 3 — Data Preparation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
+- **Week 4 — Spatial Analysis:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
+- **Month 1 — Integration Summary:** [`month-1-summary.md`](month-1-summary.md)
 
 ---
 
-# Month 2 - Development Environment and Early Python
+# Month 2 — Development Environment and Early Python
 
-## Week 5 - Python Development Environment
+**Week 8: `inspect_data.py` summarises `distance` and `block_area_sqm` in my `ibadan_north_analysis.csv` settlement dataset.**
+
+## Week 5 — Python Development Environment
 
 Week 5 marked the beginning of the development phase of the project.
 
@@ -189,7 +191,7 @@ The `hello.py` script confirmed that Python was installed and executable from th
 
 **Screenshot:** [`screenshots/week5.png`](screenshots/week5.png)
 
-## Week 6 - Environments and Project Setup with uv
+## Week 6 — Environments and Project Setup with uv
 
 Week 6 focused on creating a reproducible Python project environment, installing a package, and recording the dependencies needed to rebuild the environment.
 
@@ -219,10 +221,10 @@ This updated the project's dependency configuration and lock file.
 
 The Week 6 project files are:
 
-- **`pyproject.toml`** - describes the project and its declared dependencies.
-- **`uv.lock`** - records the exact resolved versions of the project's dependencies.
-- **`check.py`** - imports pandas and prints its installed version.
-- **`.venv`** - the local virtual environment used by the project; it is not uploaded to GitHub.
+- **`pyproject.toml`** — describes the project and its declared dependencies.
+- **`uv.lock`** — records the resolved versions of the project's dependencies.
+- **`check.py`** — imports pandas and prints its installed version.
+- **`.venv`** — the local virtual environment used by the project; it is not uploaded to GitHub.
 
 ### Verification Script
 
@@ -272,7 +274,7 @@ The screenshot records the VS Code editor and terminal showing the verification 
 
 **Week 6 status:** Pandas installed, verification script executed successfully, and project files uploaded to GitHub.
 
-## Week 7 - Python Data Analysis
+## Week 7 — Python Data Analysis
 
 Week 7 applies Python fundamentals to a small dataset of settlement wards and their areas. The practical uses variables, data types, loops, conditional statements, list indexing, type conversion, and basic error handling.
 
@@ -315,13 +317,13 @@ The classification uses a threshold of **greater than 9 km²**. An area equal to
 
 The practical files and evidence are:
 
-- [`analyse.py`](analyse.py) - Python analysis script.
-- [`wards.csv`](wards.csv) - input dataset.
-- [`screenshots/week7.png`](screenshots/week7.png) - screenshot showing the code and successful terminal output.
+- [`analyse.py`](analyse.py) — Python analysis script.
+- [`wards.csv`](wards.csv) — input dataset.
+- [`screenshots/week7.png`](screenshots/week7.png) — screenshot showing the code and successful terminal output.
 
 **Week 7 status:** The script runs successfully and classifies all four wards.
 
-## Week 8 - Python Data Inspection
+## Week 8 — Python Data Inspection
 
 Week 8 applies Python to the full settlement analysis dataset from the Month 1 road accessibility project. The exercise reads a CSV file, handles missing or invalid numeric values, and calculates descriptive statistics for two attributes.
 
@@ -338,26 +340,25 @@ Use Python to inspect the settlement dataset and summarise nearest-road distance
 
 ### Attributes Analysed
 
-1. **`distance`** - nearest mapped road distance in metres.
-2. **`block_area_sqm`** - settlement block area in square metres.
+1. **`distance`** — nearest mapped-feature distance in metres.
+2. **`block_area_sqm`** — settlement block area in square metres.
 
 ### Analysis Workflow
 
 The `inspect_data.py` script:
 
-1. Checks that the input CSV file exists.
-2. Reads the dataset using `csv.DictReader`.
-3. Counts the records and reports the available columns.
-4. Converts the selected numeric fields to floating-point values.
-5. Skips empty or invalid numeric cells.
-6. Reports valid and missing or invalid values for each selected field.
-7. Calculates the minimum, maximum and mean for both attributes.
+1. Reads the dataset using `csv.DictReader`.
+2. Converts the selected numeric fields to floating-point values.
+3. Skips empty cells and counts empty or invalid numeric values.
+4. Returns a summary dictionary for each selected field.
+5. Calculates the valid count, missing or invalid count, minimum, maximum and mean for both attributes.
+6. Prints both summary dictionaries in the terminal.
 
 ### Results
 
 The script processed **2,029 settlement records**.
 
-| Statistic | Nearest-road distance (m) | Settlement block area (m²) |
+| Statistic | Nearest-feature distance (m) | Settlement block area (m²) |
 |---|---:|---:|
 | Valid records | 2,029 | 2,029 |
 | Missing or invalid records | 0 | 0 |
@@ -370,14 +371,14 @@ The script processed **2,029 settlement records**.
 From the repository root, execute:
 
 ```powershell
-python inspect_data.py
+uv run inspect_data.py
 ```
 
-The script uses Python's standard library and does not require an additional package for CSV reading or these summary statistics.
+The script uses Python's standard library for CSV reading and calculating these summary statistics.
 
 ### Interpretation
 
-The nearest-road distance results range from 0 to 185.05 metres, with a mean of 0.92 metres. The settlement block areas vary considerably, from 1,040.32 m² to 2,999,664.52 m².
+The nearest-feature distance results range from 0 to approximately 185.05 metres, with a mean of approximately 0.92 metres. The settlement block areas vary considerably, from approximately 1,040.32 m² to 2,999,664.52 m².
 
 The distance distribution is strongly concentrated at zero, consistent with the earlier spatial analysis in which most settlement blocks had a calculated distance of zero to the mapped road/path network. A zero distance indicates that the settlement geometry intersects or touches a mapped feature under the distance calculation; it does not establish direct access for every building.
 
@@ -385,11 +386,11 @@ These statistics describe the supplied settlement polygons and their calculated 
 
 ### Week 8 Deliverables
 
-- [`inspect_data.py`](inspect_data.py) - Python data inspection script.
-- [`ibadan_north_analysis.csv`](ibadan_north_analysis.csv) - input dataset.
-- [`screenshots/week8.png`](screenshots/week8.png) - screenshot of the successful script execution, to be added to the repository.
+- [`inspect_data.py`](inspect_data.py) — Python data inspection script.
+- [`ibadan_north_analysis.csv`](ibadan_north_analysis.csv) — input dataset.
+- [`screenshots/week8.png`](screenshots/week8.png) — screenshot showing `uv run inspect_data.py` and the complete summary dictionaries for both selected columns.
 
-**Week 8 status:** The script successfully processed 2,029 records and generated summary statistics for both selected attributes. The screenshot must be saved and uploaded to complete the evidence requirement.
+**Week 8 status:** The script successfully processed 2,029 records and returned summary dictionaries for `distance` and `block_area_sqm`. The execution screenshot has been uploaded to the repository.
 
 ## Repository Structure
 
