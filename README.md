@@ -49,13 +49,13 @@ The Week 3 analysis provides a continuous measure of settlement proximity to the
 
 **Documentation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
 
-## Week 4 — Spatial Analysis
+## Week 4 - Spatial Analysis
 
 Week 4 focused on a **100 m road-proximity analysis** to examine the relationship between mapped roads and settlement areas.
 
 ### Spatial Operation
 
-A 100 m buffer was created around the mapped OpenStreetMap road network using **EPSG:32631 — WGS 84 / UTM Zone 31N**.
+A 100 m buffer was created around the mapped OpenStreetMap road network using **EPSG:32631 - WGS 84 / UTM Zone 31N**.
 
 The road dataset was filtered to exclude:
 
@@ -97,7 +97,7 @@ The analysis identified **2,026 of the 2,029 mapped settlement areas** as inters
 
 Only **3 settlement areas (0.15%)** were identified outside the 100 m threshold.
 
-This result represents proximity to the **mapped OpenStreetMap road dataset** and should not be interpreted as a complete measure of physical road accessibility. The result depends on the completeness, positional accuracy and classification of the mapped road data.
+This result represents proximity to the **mapped OpenStreetMap road dataset** and should not be interpreted as a complete measure of physical road accessibility. The result depends on the completeness, positional accuracy, and classification of the mapped road data.
 
 **Documentation:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
 
@@ -138,7 +138,7 @@ The summary connects the project from:
 
 ## Project Status
 
-**Month 1 — Four-week project completed.**
+**Month 1 - Four-week project completed.**
 
 The project progressed from project definition and data acquisition through data preparation, nearest-road distance analysis, threshold-based spatial analysis, validation, and visualisation.
 
@@ -148,19 +148,19 @@ The Week 4 workflow included road filtering, 100 m buffering, geometry validatio
 
 Detailed Month 1 project documentation is organised by week:
 
-- **Week 1 — Project Brief:** [`docs/01-project-brief.md`](docs/01-project-brief.md)
-- **Week 2 — Data Notes:** [`docs/02-data-notes.md`](docs/02-data-notes.md)
-- **Week 3 — Data Preparation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
-- **Week 4 — Spatial Analysis:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
-- **Month 1 — Integration Summary:** [`month-1-summary.md`](month-1-summary.md)
+- **Week 1 - Project Brief:** [`docs/01-project-brief.md`](docs/01-project-brief.md)
+- **Week 2 - Data Notes:** [`docs/02-data-notes.md`](docs/02-data-notes.md)
+- **Week 3 - Data Preparation:** [`docs/03-data-preparation.md`](docs/03-data-preparation.md)
+- **Week 4 - Spatial Analysis:** [`docs/04-spatial-analysis.md`](docs/04-spatial-analysis.md)
+- **Month 1 - Integration Summary:** [`month-1-summary.md`](month-1-summary.md)
 
 ---
 
-# Month 2 — Development Environment and Early Python
+# Month 2 - Development Environment and Early Python
 
 **Week 8: `inspect_data.py` summarises `distance` and `block_area_sqm` in my `ibadan_north_analysis.csv` settlement dataset.**
 
-## Week 5 — Python Development Environment
+## Week 5 - Python Development Environment
 
 Week 5 marked the beginning of the development phase of the project.
 
@@ -191,7 +191,7 @@ The `hello.py` script confirmed that Python was installed and executable from th
 
 **Screenshot:** [`screenshots/week5.png`](screenshots/week5.png)
 
-## Week 6 — Environments and Project Setup with uv
+## Week 6 - Environments and Project Setup with uv
 
 Week 6 focused on creating a reproducible Python project environment, installing a package, and recording the dependencies needed to rebuild the environment.
 
@@ -221,10 +221,10 @@ This updated the project's dependency configuration and lock file.
 
 The Week 6 project files are:
 
-- **`pyproject.toml`** — describes the project and its declared dependencies.
-- **`uv.lock`** — records the resolved versions of the project's dependencies.
-- **`check.py`** — imports pandas and prints its installed version.
-- **`.venv`** — the local virtual environment used by the project; it is not uploaded to GitHub.
+- **`pyproject.toml`** - describes the project and its declared dependencies.
+- **`uv.lock`** - records the resolved versions of the project's dependencies.
+- **`check.py`** - imports pandas and prints its installed version.
+- **`.venv`** - the local virtual environment used by the project; it is not uploaded to GitHub.
 
 ### Verification Script
 
@@ -317,13 +317,13 @@ The classification uses a threshold of **greater than 9 km²**. An area equal to
 
 The practical files and evidence are:
 
-- [`analyse.py`](analyse.py) — Python analysis script.
-- [`wards.csv`](wards.csv) — input dataset.
-- [`screenshots/week7.png`](screenshots/week7.png) — screenshot showing the code and successful terminal output.
+- [`analyse.py`](analyse.py) - Python analysis script.
+- [`wards.csv`](wards.csv) - input dataset.
+- [`screenshots/week7.png`](screenshots/week7.png) - screenshot showing the code and successful terminal output.
 
 **Week 7 status:** The script runs successfully and classifies all four wards.
 
-## Week 8 — Python Data Inspection
+## Week 8 - Python Data Inspection
 
 Week 8 applies Python to the full settlement analysis dataset from the Month 1 road accessibility project. The exercise reads a CSV file, handles missing or invalid numeric values, and calculates descriptive statistics for two attributes.
 
@@ -340,8 +340,8 @@ Use Python to inspect the settlement dataset and summarise nearest-road distance
 
 ### Attributes Analysed
 
-1. **`distance`** — nearest mapped-feature distance in metres.
-2. **`block_area_sqm`** — settlement block area in square metres.
+1. **`distance`** - nearest mapped-feature distance in metres.
+2. **`block_area_sqm`** - settlement block area in square metres.
 
 ### Analysis Workflow
 
@@ -386,8 +386,8 @@ These statistics describe the supplied settlement polygons and their calculated 
 
 ### Week 8 Deliverables
 
-- [`inspect_data.py`](inspect_data.py) — Python data inspection script.
-- [`ibadan_north_analysis.csv`](ibadan_north_analysis.csv) — input dataset.
+- [`inspect_data.py`](inspect_data.py) - Python data inspection script.
+- [`ibadan_north_analysis.csv`](ibadan_north_analysis.csv) - input dataset.
 - [`screenshots/week8.png`](screenshots/week8.png) — screenshot showing `uv run inspect_data.py` and the complete summary dictionaries for both selected columns.
 
 **Week 8 status:** The script successfully processed 2,029 records and returned summary dictionaries for `distance` and `block_area_sqm`. The execution screenshot has been uploaded to the repository.
