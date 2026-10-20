@@ -321,6 +321,76 @@ The practical files and evidence are:
 
 **Week 7 status:** The script runs successfully and classifies all four wards.
 
+## Week 8 - Python Data Inspection
+
+Week 8 applies Python to the full settlement analysis dataset from the Month 1 road accessibility project. The exercise reads a CSV file, handles missing or invalid numeric values, and calculates descriptive statistics for two attributes.
+
+### Objective
+
+Use Python to inspect the settlement dataset and summarise nearest-road distance and settlement block area.
+
+### Dataset
+
+- **File:** `ibadan_north_analysis.csv`
+- **Source:** The analysis-ready settlement dataset prepared for the Ibadan North road accessibility project.
+- **Records analysed:** 2,029 settlement features.
+- **Method:** Python's `csv.DictReader` reads the CSV using its column headers.
+
+### Attributes Analysed
+
+1. **`distance`** - nearest mapped road distance in metres.
+2. **`block_area_sqm`** - settlement block area in square metres.
+
+### Analysis Workflow
+
+The `inspect_data.py` script:
+
+1. Checks that the input CSV file exists.
+2. Reads the dataset using `csv.DictReader`.
+3. Counts the records and reports the available columns.
+4. Converts the selected numeric fields to floating-point values.
+5. Skips empty or invalid numeric cells.
+6. Reports valid and missing or invalid values for each selected field.
+7. Calculates the minimum, maximum and mean for both attributes.
+
+### Results
+
+The script processed **2,029 settlement records**.
+
+| Statistic | Nearest-road distance (m) | Settlement block area (m²) |
+|---|---:|---:|
+| Valid records | 2,029 | 2,029 |
+| Missing or invalid records | 0 | 0 |
+| Minimum | 0.00 | 1,040.32 |
+| Maximum | 185.05 | 2,999,664.52 |
+| Mean | 0.92 | 21,713.63 |
+
+### How to Run
+
+From the repository root, execute:
+
+```powershell
+python inspect_data.py
+```
+
+The script uses Python's standard library and does not require an additional package for CSV reading or these summary statistics.
+
+### Interpretation
+
+The nearest-road distance results range from 0 to 185.05 metres, with a mean of 0.92 metres. The settlement block areas vary considerably, from 1,040.32 m² to 2,999,664.52 m².
+
+The distance distribution is strongly concentrated at zero, consistent with the earlier spatial analysis in which most settlement blocks had a calculated distance of zero to the mapped road/path network. A zero distance indicates that the settlement geometry intersects or touches a mapped feature under the distance calculation; it does not establish direct access for every building.
+
+These statistics describe the supplied settlement polygons and their calculated proximity to mapped features. They should not be interpreted as a complete measure of access for every individual building.
+
+### Week 8 Deliverables
+
+- [`inspect_data.py`](inspect_data.py) - Python data inspection script.
+- [`ibadan_north_analysis.csv`](ibadan_north_analysis.csv) - input dataset.
+- [`screenshots/week8.png`](screenshots/week8.png) - screenshot of the successful script execution, to be added to the repository.
+
+**Week 8 status:** The script successfully processed 2,029 records and generated summary statistics for both selected attributes. The screenshot must be saved and uploaded to complete the evidence requirement.
+
 ## Repository Structure
 
 The repository contains the Month 1 spatial analysis documentation and outputs, together with the Month 2 Python development files.
@@ -328,17 +398,32 @@ The repository contains the Month 1 spatial analysis documentation and outputs, 
 ```text
 ibadan-north-road-access/
 ├── data/
+│   ├── ibadan_north_analysis_v2.gpkg
+│   ├── Ibadan_North_LGA.geojson
+│   ├── ibadan_north_road_buffer_100m.gpkg
+│   ├── ibadan_north_road_buffer_100m_dissolved.gpkg
+│   ├── ibadan_north_roads.gpkg
+│   ├── ibadan_north_settlements.gpkg
+│   ├── ibadan_north_settlements_within_100m.gpkg
+│   └── ibadan_north_settlements_outside_100m.gpkg
 ├── docs/
+│   ├── 01-project-brief.md
+│   ├── 02-data-notes.md
+│   ├── 03-data-preparation.md
+│   └── 04-spatial-analysis.md
 ├── maps/
 │   └── week4-road-accessibility-100m.png
 ├── screenshots/
 │   ├── week5.png
 │   ├── week6.png
-│   └── week7.png
+│   ├── week7.png
+│   └── week8.png
 ├── README.md
 ├── analyse.py
 ├── check.py
 ├── hello.py
+├── ibadan_north_analysis.csv
+├── inspect_data.py
 ├── month-1-summary.md
 ├── pyproject.toml
 ├── uv.lock
