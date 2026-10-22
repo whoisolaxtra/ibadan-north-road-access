@@ -31,11 +31,11 @@ The project examines settlement proximity to the mapped road network using conti
 
 The spatial analysis uses:
 
-**EPSG:32631 — WGS 84 / UTM Zone 31N**
+**EPSG:32631 - WGS 84 / UTM Zone 31N**
 
 Distances are calculated in metres.
 
-### Week 3 — Nearest-Road Distance Analysis
+### Week 3 - Nearest-Road Distance Analysis
 
 The analysis-ready dataset contains **2,029 settlement features** with a nearest-road distance field.
 
@@ -274,7 +274,7 @@ The screenshot records the VS Code editor and terminal showing the verification 
 
 **Week 6 status:** Pandas installed, verification script executed successfully, and project files uploaded to GitHub.
 
-## Week 7 — Python Data Analysis
+## Week 7 - Python Data Analysis
 
 Week 7 applies Python fundamentals to a small dataset of settlement wards and their areas. The practical uses variables, data types, loops, conditional statements, list indexing, type conversion, and basic error handling.
 
