@@ -158,7 +158,7 @@ Detailed Month 1 project documentation is organised by week:
 
 # Month 2 - Development Environment and Early Python
 
-**Week 8: `inspect_data.py` summarises `distance` and `block_area_sqm` in my `ibadan_north_analysis.csv` settlement dataset.**
+**Week 8:** `inspect_data.py` summarises `distance` and `block_area_sqm` in my `ibadan_north_analysis.csv` settlement dataset.
 
 ## Week 5 - Python Development Environment
 
@@ -388,9 +388,56 @@ These statistics describe the supplied settlement polygons and their calculated 
 
 - [`inspect_data.py`](inspect_data.py) - Python data inspection script.
 - [`ibadan_north_analysis.csv`](ibadan_north_analysis.csv) - input dataset.
-- [`screenshots/week8.png`](screenshots/week8.png) — screenshot showing `uv run inspect_data.py` and the complete summary dictionaries for both selected columns.
+- [`screenshots/week8.png`](screenshots/week8.png) - screenshot showing `uv run inspect_data.py` and the complete summary dictionaries for both selected columns.
 
-**Week 8 status:** The script successfully processed 2,029 records and returned summary dictionaries for `distance` and `block_area_sqm`. The execution screenshot has been uploaded to the repository.
+**Week 8 status:** The script successfully processed 2,029 records and returned summary dictionaries for `distance` and `block_area_sqm`.
+
+## Week 9 - Consolidation and Refactoring
+
+Week 9 focuses on improving the structure of the Week 8 workflow without changing its purpose. The refactored `summary.py` script uses small, reusable functions to read the Month 1 CSV, clean numeric values, calculate statistics, and summarise multiple columns.
+
+### Refactoring Workflow
+
+The script contains four functions:
+
+- **`read_rows(filename)`** - reads the CSV file into a list of dictionaries.
+- **`clean_values(rows, column)`** - extracts valid numeric values from a selected column and skips empty or invalid entries.
+- **`summarise(values)`** - returns the count, smallest value, largest value and average, including a safe result for an empty list.
+- **`summarise_all(filename, columns)`** - applies the other functions to multiple columns and returns their summaries in a dictionary.
+
+The main part of the script calls `summarise_all()` for `distance` and `block_area_sqm`, then prints one summary for each column.
+
+### Verification
+
+The script was run using:
+
+```powershell
+uv run summary.py
+```
+
+The output was compared with the Week 8 inspection results. Both columns returned **2,029 valid values**, with no missing or invalid numeric values.
+
+| Statistic | `distance` | `block_area_sqm` |
+|---|---:|---:|
+| Count | 2,029 | 2,029 |
+| Smallest | 0.00 | 1,040.32 |
+| Largest | 185.05 | 2,999,664.52 |
+| Average | 0.92 | 21,713.63 |
+
+The count, smallest value, largest value and average remained consistent with the original Week 8 calculations. This verifies that the refactoring preserved the results while making the code easier to follow and reuse.
+
+### Week 9 Deliverables
+
+- [`summary.py`](summary.py) - refactored Python script and multi-column summary workflow.
+- [`screenshots/week9.png`](screenshots/week9.png) - screenshot showing the command and full terminal output.
+
+**Week 9 status:** Refactored script runs successfully and produces summaries for two real columns from the Month 1 dataset.
+
+## Month 2 Reflection
+
+Coming from a geospatial background, I was already familiar with working with spatial data, analysing road proximity and interpreting results in QGIS. This month helped me begin to understand how some of that analytical work can be expressed as Python code rather than relying entirely on software menus and manual steps. Working with my own Ibadan North dataset made the learning more meaningful because I could connect Python concepts such as loops, dictionaries, functions and return values to data I had already analysed.
+
+One idea that became clearer to me is that a function should return a result that another part of the programme can use; printing a result is not the same thing. I also learnt why breaking a script into small functions makes it easier to understand, test and maintain. I am still building confidence in writing Python programmes from scratch and deciding how best to organise them without relying on examples. My capstone is an important first step towards making my geospatial analysis workflows more repeatable, transparent and easier to apply to other datasets.
 
 ## Repository Structure
 
@@ -418,7 +465,8 @@ ibadan-north-road-access/
 │   ├── week5.png
 │   ├── week6.png
 │   ├── week7.png
-│   └── week8.png
+│   ├── week8.png
+│   └── week9.png
 ├── README.md
 ├── analyse.py
 ├── check.py
@@ -427,6 +475,7 @@ ibadan-north-road-access/
 ├── inspect_data.py
 ├── month-1-summary.md
 ├── pyproject.toml
+├── summary.py
 ├── uv.lock
 └── wards.csv
 ```
