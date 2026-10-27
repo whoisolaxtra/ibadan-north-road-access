@@ -435,9 +435,10 @@ The count, smallest value, largest value and average remained consistent with th
 
 ## Month 2 Reflection
 
-Coming from a geospatial background, I was already familiar with working with spatial data, analysing road proximity and interpreting results in QGIS. This month helped me begin to understand how some of that analytical work can be expressed as Python code rather than relying entirely on software menus and manual steps. Working with my own Ibadan North dataset made the learning more meaningful because I could connect Python concepts such as loops, dictionaries, functions and return values to data I had already analysed.
+## Month 2 Reflection
 
-One idea that became clearer to me is that a function should return a result that another part of the programme can use; printing a result is not the same thing. I also learnt why breaking a script into small functions makes it easier to understand, test and maintain. I am still building confidence in writing Python programmes from scratch and deciding how best to organise them without relying on examples. My capstone is an important first step towards making my geospatial analysis workflows more repeatable, transparent and easier to apply to other datasets.
+Coming from a geospatial background, I was already comfortable using QGIS to prepare spatial data, perform road-accessibility analysis and interpret maps, but Month 2 challenged me to express some of that analytical work through Python code. Working with my own Ibadan North dataset helped me connect Python concepts such as loops, dictionaries, and functions to a real geospatial problem rather than learning them in isolation. 
+One important lesson was understanding that functions should return results that other parts of a programme can use, and I am still building confidence in writing and organising Python code independently. My capstone is a first step towards making my geospatial workflows more repeatable and applying programming to larger or more complex spatial datasets.
 
 ## Repository Structure
 
