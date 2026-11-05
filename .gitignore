@@ -1,9 +1,9 @@
-﻿# Python environment and caches
+# Python environment and caches
 .venv/
 __pycache__/
 *.pyc
 
-# Rasters and archives
+# Raster files and archives
 *.tif
 *.TIF
 *.zip
@@ -12,4 +12,3 @@ __pycache__/
 .DS_Store
 Thumbs.db
 .vscode/
-*.tif
