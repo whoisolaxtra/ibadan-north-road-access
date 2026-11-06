@@ -1,10 +1,10 @@
-# Week 10: GeoPandas — Loaded, Checked, Joined and Mapped
+# Week 10: GeoPandas - Loaded, Checked, Joined and Mapped
 
 ## 1. Project overview
 
-This exercise applies Python, pandas and GeoPandas to geospatial data for Ibadan North LGA, Oyo State, Nigeria.
+This exercise applies Python, pandas, and GeoPandas to geospatial data for Ibadan North LGA, Oyo State, Nigeria.
 
-The work covers tabular data inspection, filtering, sorting, vector-layer inspection, geometry validation, coordinate conversion, attribute joins, map production and output management.
+The work covers tabular data inspection, filtering, sorting, vector-layer inspection, geometry validation, coordinate conversion, attribute joins, map production, and output management.
 
 The independent challenge applies these techniques to data from my existing Ibadan North road-accessibility project.
 
@@ -12,10 +12,10 @@ The independent challenge applies these techniques to data from my existing Ibad
 
 The exercise uses:
 
-- `data/raw/ward_population.csv` — ward-level population data for 2024.
-- `data/raw/health_facilities.csv` — health facility names, types and coordinates.
-- `data/processed/wards.gpkg` — ward polygon layer.
-- `data/processed/` — location for processed geospatial outputs.
+- `data/raw/ward_population.csv` - ward-level population data for 2024.
+- `data/raw/health_facilities.csv` - health facility names, types, and coordinates.
+- `data/processed/wards.gpkg` - ward polygon layer.
+- `data/processed/` - location for processed geospatial outputs.
 
 The ward and facility datasets are used to demonstrate spatial data inspection, point creation, attribute joining and mapping.
 
@@ -25,10 +25,10 @@ The eight guided scripts are:
 
 | Script | Purpose |
 |---|---|
-| `explore_pandas.py` | Loads and inspects the ward population CSV, including its structure, columns, data types and summary statistics. |
-| `filter_sort.py` | Filters wards by population, sorts the results and creates a population-in-thousands column. |
-| `explore_layer.py` | Inspects the ward GeoPackage, including its layers, feature count, geometry type, CRS and spatial bounds. |
-| `geom_props.py` | Examines a polygon geometry, checks validity and calculates its centroid. |
+| `explore_pandas.py` | Loads and inspects the ward population CSV, including its structure, columns, data types, and summary statistics. |
+| `filter_sort.py` | Filters wards by population, sorts the results, and creates a population-in-thousands column. |
+| `explore_layer.py` | Inspects the ward GeoPackage, including its layers, feature count, geometry type, CRS, and spatial bounds. |
+| `geom_props.py` | Examines a polygon geometry, checks validity, and calculates its centroid. |
 | `csv_to_points.py` | Converts health facility coordinates from CSV into a GeoDataFrame and saves a point GeoPackage. |
 | `join_population.py` | Joins population records to ward polygons and cleans inconsistent ward names to improve matching. |
 | `make_map.py` | Produces a quick map of ward polygons and health facility locations. |
@@ -36,14 +36,14 @@ The eight guided scripts are:
 
 ### Guided practical outputs
 
-- `facilities_map.png` — quick map of wards and health facilities.
-- `wards_table.csv` — ward attribute table without geometry.
-- `data/processed/week10_outputs.gpkg` — GeoPackage containing the `wards_copy` polygon layer.
-- `data/processed/facilities.gpkg` — point layer created from the guided health facility CSV exercise.
+- `facilities_map.png` - quick map of wards and health facilities.
+- `wards_table.csv` - ward attribute table without geometry.
+- `data/processed/week10_outputs.gpkg` - GeoPackage containing the `wards_copy` polygon layer.
+- `data/processed/facilities.gpkg` - point layer created from the guided health facility CSV exercise.
 
 ## 4. Independent challenge
 
-The independent challenge applies the Week 10 techniques to the Ibadan North training datasets, extending the guided exercises through additional data cleaning, spatial processing and mapping.
+The independent challenge applies the Week 10 techniques to the Ibadan North training datasets, extending the guided exercises through additional data cleaning, spatial processing, and mapping.
 
 ### `my_explore.py`
 
@@ -117,13 +117,13 @@ uv run month-03/week-10/my_map.py
 
 ## 6. Key findings and lessons
 
-The exercises demonstrated how pandas and GeoPandas can be used together to inspect, clean, join and visualise geospatial datasets.
+The exercises demonstrated how pandas and GeoPandas can be used together to inspect, clean, join, and visualise geospatial datasets.
 
-The population join initially matched 9 of 12 wards. After applying consistent name cleaning to both datasets, all 12 wards matched.
+The population joins initially matched 9 of 12 wards. After applying consistent name cleaning to both datasets, all 12 wards matched.
 
 The health facility CSV contained 41 records. Standardising `PHC` and `Primary Health Centre` produced a consistent facility category.
 
-The exercises also reinforced the importance of checking geometry types, CRS, spatial bounds and coordinate order before using geospatial data.
+The exercises also reinforced the importance of checking geometry types, CRS, spatial bounds, and coordinate order before using geospatial data.
 
 ## 7. Limitations
 
@@ -133,6 +133,6 @@ The EPSG:4326 CRS is geographic and uses angular coordinates. A suitable project
 
 ## 8. Conclusion
 
-Week 10 provided practical experience in using pandas and GeoPandas to inspect tabular and vector data, create spatial points, validate geometries, join datasets and produce thematic maps.
+Week 10 provided practical experience in using pandas and GeoPandas to inspect tabular and vector data, create spatial points, validate geometries, join datasets, and produce thematic maps.
 
 Applying the techniques to my Ibadan North project data helped connect the Python exercises to an existing geospatial workflow.
