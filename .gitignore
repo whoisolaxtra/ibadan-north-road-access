@@ -1,7 +1,23 @@
+
 # Python environment and caches
 .venv/
+venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Python testing and tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.swp
+*~
 
 # Raster files and archives
 *.tif
