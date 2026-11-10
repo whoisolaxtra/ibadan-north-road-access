@@ -525,6 +525,64 @@ Detailed documentation, scripts and outputs are available in:
 
 **Week 10 status:** Eight guided practical scripts and four independent challenge scripts completed and executed.
 
+## Week 11 - Coordinate Reference Systems and Spatial Operations
+
+Week 11 focused on understanding coordinate reference systems (CRS), performing spatial operations with GeoPandas, and applying geometry validation techniques to real geospatial datasets.
+
+### 1. Guided Practical Exercises
+
+Eight guided scripts were completed:
+
+- `area_wrong_and_right.py` - compared area calculations in geographic and projected coordinate systems.
+- `set_vs_to.py` - demonstrated the difference between assigning a CRS and transforming coordinates.
+- `one_point.py` - transformed geographic coordinates into UTM coordinates using PyProj.
+- `spatial_ops.py` - performed spatial joins and buffer operations.
+- `coverage_gap.py` - identified areas outside facility coverage zones.
+- `nearest.py` - calculated distances to the nearest facility.
+- `clip_dissolve.py` - applied clipping and dissolve operations.
+- `fix_geometry.py` - checked and repaired invalid geometries.
+
+### 2. Independent Challenges
+
+Four additional scripts were developed using the Ibadan North project datasets:
+
+- `my_crs.py` - examined CRS compatibility, reprojected datasets and calculated spatial measurements.
+- `my_count.py` - counted road-derived representative points within settlement polygons.
+- `my_reach.py` - assessed settlement proximity to the mapped road network using a 100 m threshold.
+- `my_validity.py` - checked and validated settlement and road geometries.
+
+### 3. Key Results
+
+- Identified EPSG:32631 (WGS 84 / UTM Zone 31N) as the appropriate projected CRS for metric analysis in Ibadan North.
+- Calculated a total settlement area of approximately 44.03 km².
+- Identified 619 settlement polygons with zero road-derived representative points.
+- Achieved 97.63% settlement representative-point coverage within 100 m of the mapped road network.
+- Identified 48 settlement blocks outside the 100 m road-proximity threshold.
+- Confirmed that the input settlement and road geometries were valid, with no repairs required.
+
+### 4. Tools and Technologies
+
+- Python 3.14.8
+- GeoPandas
+- Shapely
+- PyProj
+- pandas
+- Visual Studio Code
+- uv
+
+### 5. Methodological Considerations
+
+Metric distance and area calculations were performed using EPSG:32631. The road proximity analysis measures geometric distance to mapped roads and does not represent network-based travel distance or actual travel time.
+
+Road-derived representative points are used for the point-in-polygon exercise and should not be interpreted as independent building or facility observations.
+
+### 6. Week 11 Deliverables
+
+Detailed documentation, scripts and GeoPackage outputs are available in:
+
+[`month-03/week-11/README.md`](month-03/week-11/README.md)
+
+**Week 11 status:** Eight guided exercises and four independent challenges completed, documented and published to GitHub.
 ---
 
 ## Repository Structure
@@ -573,6 +631,21 @@ ibadan-north-road-access/
 │       ├── facilities_map.png
 │       ├── my_map.png
 │       └── wards_table.csv
+└── week-11/
+    ├── README.md
+    ├── area_wrong_and_right.py
+    ├── clip_dissolve.py
+    ├── coverage_gap.py
+    ├── fix_geometry.py
+    ├── my_count.py
+    ├── my_crs.py
+    ├── my_reach.py
+    ├── my_validity.py
+    ├── nearest.py
+    ├── one_point.py
+    ├── set_vs_to.py
+    ├── spatial_ops.py
+    └── outputs/
 │
 ├── screenshots/
 │   ├── week5.png
