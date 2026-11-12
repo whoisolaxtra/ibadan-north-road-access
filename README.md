@@ -158,8 +158,6 @@ Detailed Month 1 project documentation is organised by week:
 
 # Month 2 - Development Environment and Early Python
 
-**Week 8:** `inspect_data.py` summarises `distance` and `block_area_sqm` in my `ibadan_north_analysis.csv` settlement dataset.
-
 ## Week 5 - Python Development Environment
 
 Week 5 marked the beginning of the development phase of the project.
