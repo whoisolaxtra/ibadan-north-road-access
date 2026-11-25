@@ -581,6 +581,22 @@ Detailed documentation, scripts and GeoPackage outputs are available in:
 [`month-03/week-11/README.md`](month-03/week-11/README.md)
 
 **Week 11 status:** Eight guided exercises and four independent challenges completed, documented and published to GitHub.
+
+## Week 12 - Raster Analysis with Rasterio
+
+Week 12 focused on raster inspection, pixel value extraction, coordinate transformations, NDVI computation, raster visualisation and zonal statistics using Rasterio.
+
+- Used the Landsat 9 Surface Reflectance bands B4 and B5 to calculate NDVI for Ibadan North.
+- Generated an NDVI raster and visualisation map.
+- Computed zonal NDVI statistics for 2,029 settlement polygons.
+- Obtained valid NDVI statistics for 1,961 polygons, while 68 polygons had no valid NDVI pixels.
+- Recorded an overall mean of polygon NDVI values of 0.584.
+
+**Week 12 status:** Nine guided scripts and independent raster challenges completed and executed using the project's own DEM, Landsat imagery and settlement data.
+
+**Detailed documentation:** `month-03/week-12/README.md`
+
+**Raster data notes:** `data-notes.md`
 ---
 
 ## Repository Structure
@@ -588,12 +604,19 @@ Detailed documentation, scripts and GeoPackage outputs are available in:
 The repository contains the Month 1 spatial analysis documentation and outputs, Month 2 Python development files, and Month 3 Week 10 GeoPandas exercises.
 
 ```text
+
 ibadan-north-road-access/
 │
 ├── data/
 │   ├── raw/
 │   │   ├── health_facilities.csv
-│   │   └── ward_population.csv
+│   │   ├── ward_population.csv
+│   │   ├── dem.tif                         # Local only, not committed
+│   │   └── landsat/
+│   │       ├── LC09_L2SP_191055_20260115_20260117_02_T1_SR_B4.TIF
+│   │       │                                  # Local only, not committed
+│   │       └── LC09_L2SP_191055_20260115_20260117_02_T1_SR_B5.TIF
+│   │                                          # Local only, not committed
 │   │
 │   └── processed/
 │       ├── wards.gpkg
@@ -612,38 +635,64 @@ ibadan-north-road-access/
 │   └── week4-road-accessibility-100m.png
 │
 ├── month-03/
-│   └── week-10/
+│   ├── week-10/
+│   │   ├── README.md
+│   │   ├── explore_pandas.py
+│   │   ├── filter_sort.py
+│   │   ├── explore_layer.py
+│   │   ├── geom_props.py
+│   │   ├── csv_to_points.py
+│   │   ├── join_population.py
+│   │   ├── make_map.py
+│   │   ├── save_outputs.py
+│   │   ├── my_explore.py
+│   │   ├── my_points.py
+│   │   ├── my_join.py
+│   │   ├── my_map.py
+│   │   ├── facilities_map.png
+│   │   ├── my_map.png
+│   │   └── wards_table.csv
+│   │
+│   ├── week-11/
+│   │   ├── README.md
+│   │   ├── area_wrong_and_right.py
+│   │   ├── clip_dissolve.py
+│   │   ├── coverage_gap.py
+│   │   ├── fix_geometry.py
+│   │   ├── my_count.py
+│   │   ├── my_crs.py
+│   │   ├── my_reach.py
+│   │   ├── my_validity.py
+│   │   ├── nearest.py
+│   │   ├── one_point.py
+│   │   ├── set_vs_to.py
+│   │   ├── spatial_ops.py
+│   │   └── outputs/
+│   │       ├── my_count_results.gpkg
+│   │       ├── my_crs_results.gpkg
+│   │       ├── my_reach_results.gpkg
+│   │       ├── my_valid_roads.gpkg
+│   │       ├── my_valid_settlements.gpkg
+│   │       └── wards_fixed.gpkg
+│   │
+│   └── week-12/
 │       ├── README.md
-│       ├── explore_pandas.py
-│       ├── filter_sort.py
-│       ├── explore_layer.py
-│       ├── geom_props.py
-│       ├── csv_to_points.py
-│       ├── join_population.py
-│       ├── make_map.py
-│       ├── save_outputs.py
-│       ├── my_explore.py
-│       ├── my_points.py
-│       ├── my_join.py
+│       ├── inspect_raster.py
+│       ├── read_values.py
+│       ├── pixel_coords.py
+│       ├── sample_points.py
+│       ├── ndvi.py
+│       ├── plot_raster.py
+│       ├── clip_raster.py
+│       ├── zonal_stats.py
+│       ├── reproject_raster.py
+│       ├── my_inspect.py
+│       ├── my_index.py
+│       ├── my_zonal.py
 │       ├── my_map.py
-│       ├── facilities_map.png
 │       ├── my_map.png
-│       └── wards_table.csv
-└── week-11/
-    ├── README.md
-    ├── area_wrong_and_right.py
-    ├── clip_dissolve.py
-    ├── coverage_gap.py
-    ├── fix_geometry.py
-    ├── my_count.py
-    ├── my_crs.py
-    ├── my_reach.py
-    ├── my_validity.py
-    ├── nearest.py
-    ├── one_point.py
-    ├── set_vs_to.py
-    ├── spatial_ops.py
-    └── outputs/
+│       ├── ndvi_map.png
+│       └── my_zonal_stats.csv
 │
 ├── screenshots/
 │   ├── week5.png
@@ -653,6 +702,7 @@ ibadan-north-road-access/
 │   └── week9.png
 │
 ├── README.md
+├── data-notes.md
 ├── analyse.py
 ├── check.py
 ├── hello.py
@@ -663,6 +713,7 @@ ibadan-north-road-access/
 ├── summary.py
 ├── uv.lock
 └── wards.csv
+
 ```
 
 The `.venv` directory is maintained locally and is not included in the GitHub repository.
