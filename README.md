@@ -105,7 +105,7 @@ This result represents proximity to the **mapped OpenStreetMap road dataset** an
 
 The Week 3 analysis-ready GeoPackage is:
 
-`data/ibadan_north_analysis_v2.gpkg`
+[`data/ibadan_north_analysis_v2.gpkg`](data/ibadan_north_analysis_v2.gpkg)
 
 It contains the settlement features and the calculated nearest-road distance field.
 
@@ -594,10 +594,10 @@ Week 12 focused on raster inspection, pixel value extraction, coordinate transfo
 
 **Week 12 status:** Nine guided scripts and independent raster challenges completed and executed using the project's own DEM, Landsat imagery and settlement data.
 
-**Detailed documentation:** `month-03/week-12/README.md`
+**Detailed documentation:** [`month-03/week-12/README.md`](month-03/week-12/README.md)
 
-**Raster data notes:** `data-notes.md`
----
+**Raster data notes:** [`data-notes.md`](data-notes.md)
+***
 
 ## Repository Structure
 
