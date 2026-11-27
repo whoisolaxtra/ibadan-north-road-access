@@ -1,0 +1,49 @@
+2026-11-27 17:11:59,778  INFO  Converted akinyele.csv: 29 points
+2026-11-27 17:11:59,780  ERROR  Failed on egbeda.csv: missing columns: ['latitude', 'longitude']
+2026-11-27 17:11:59,887  INFO  Converted ibadan_north.csv: 28 points
+2026-11-27 17:12:00,099  INFO  Converted ibadan_north_east.csv: 21 points
+2026-11-27 17:12:00,206  INFO  Converted ibadan_south_west.csv: 17 points
+2026-11-27 17:12:00,279  INFO  Converted ido.csv: 10 points
+2026-11-27 17:12:00,372  INFO  Finished 6 files in 8.2 seconds
+2026-11-27 17:26:59,121  INFO  Skipping akinyele.csv, output already exists
+2026-11-27 17:26:59,126  ERROR  Failed on egbeda.csv: missing columns: ['latitude', 'longitude']
+2026-11-27 17:26:59,127  INFO  Skipping ibadan_north.csv, output already exists
+2026-11-27 17:26:59,128  INFO  Skipping ibadan_north_east.csv, output already exists
+2026-11-27 17:26:59,129  INFO  Skipping ibadan_south_west.csv, output already exists
+2026-11-27 17:26:59,129  INFO  Skipping ido.csv, output already exists
+2026-11-27 17:26:59,178  INFO  Finished 6 files in 0.1 seconds
+2026-11-27 17:32:48,004  INFO  Skipping akinyele.csv, output already exists
+2026-11-27 17:32:48,008  ERROR  Failed on egbeda.csv: missing columns: ['latitude', 'longitude']
+2026-11-27 17:32:48,009  INFO  Skipping ibadan_north.csv, output already exists
+2026-11-27 17:32:48,009  INFO  Skipping ibadan_north_east.csv, output already exists
+2026-11-27 17:32:48,010  INFO  Skipping ibadan_south_west.csv, output already exists
+2026-11-27 17:32:48,010  INFO  Skipping ido.csv, output already exists
+2026-11-27 17:32:48,018  INFO  Finished 6 files in 0.0 seconds
+2026-11-27 17:32:56,521  INFO  Skipping akinyele.csv, output already exists
+2026-11-27 17:32:56,525  ERROR  Failed on egbeda.csv: missing columns: ['latitude', 'longitude']
+2026-11-27 17:32:56,525  INFO  Skipping ibadan_north.csv, output already exists
+2026-11-27 17:32:56,526  INFO  Skipping ibadan_north_east.csv, output already exists
+2026-11-27 17:32:56,526  INFO  Skipping ibadan_south_west.csv, output already exists
+2026-11-27 17:32:56,527  INFO  Skipping ido.csv, output already exists
+2026-11-27 17:32:56,534  INFO  Finished 6 files in 0.0 seconds
+2026-11-27 17:35:03,729  INFO  Skipping akinyele.csv, output already exists
+2026-11-27 17:35:04,930  INFO  Converted egbeda.csv: 15 points
+2026-11-27 17:35:04,931  INFO  Skipping ibadan_north.csv, output already exists
+2026-11-27 17:35:04,932  INFO  Skipping ibadan_north_east.csv, output already exists
+2026-11-27 17:35:04,933  INFO  Skipping ibadan_south_west.csv, output already exists
+2026-11-27 17:35:04,933  INFO  Skipping ido.csv, output already exists
+2026-11-27 17:35:04,941  INFO  Finished 6 files in 1.2 seconds
+2026-11-27 17:44:29,390  INFO  Skipping akinyele.csv, output already exists
+2026-11-27 17:44:29,390  INFO  Skipping egbeda.csv, output already exists
+2026-11-27 17:44:29,391  INFO  Skipping ibadan_north.csv, output already exists
+2026-11-27 17:44:29,391  INFO  Skipping ibadan_north_east.csv, output already exists
+2026-11-27 17:44:29,392  INFO  Skipping ibadan_south_west.csv, output already exists
+2026-11-27 17:44:29,392  INFO  Skipping ido.csv, output already exists
+2026-11-27 17:44:29,401  INFO  Finished 6 files in 0.0 seconds
+2026-11-27 17:46:30,468  INFO  Skipping akinyele.csv, output already exists
+2026-11-27 17:46:30,607  INFO  Converted egbeda.csv: 15 points
+2026-11-27 17:46:30,608  INFO  Skipping ibadan_north.csv, output already exists
+2026-11-27 17:46:30,608  INFO  Skipping ibadan_north_east.csv, output already exists
+2026-11-27 17:46:30,609  INFO  Skipping ibadan_south_west.csv, output already exists
+2026-11-27 17:46:30,645  INFO  Skipping ido.csv, output already exists
+2026-11-27 17:46:30,652  INFO  Finished 6 files in 0.2 seconds

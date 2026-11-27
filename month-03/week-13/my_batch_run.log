@@ -1,0 +1,8 @@
+2026-11-27 18:00:13,489  INFO  Found 5 GeoPackage files
+2026-11-27 18:00:13,768  INFO  Reprojected facilities.gpkg: 41 features, EPSG:4326 to EPSG:32631
+2026-11-27 18:00:13,823  INFO  Reprojected my_facilities.gpkg: 41 features, EPSG:4326 to EPSG:32631
+2026-11-27 18:00:13,920  INFO  Reprojected roads.gpkg: 25 features, EPSG:4326 to EPSG:32631
+2026-11-27 18:00:14,015  INFO  Reprojected wards.gpkg: 12 features, EPSG:4326 to EPSG:32631
+2026-11-27 18:00:14,081  INFO  Reprojected week10_outputs.gpkg: 12 features, EPSG:4326 to EPSG:32631
+2026-11-27 18:00:14,089  INFO  Finished 5 files in 0.64 seconds
+2026-11-27 18:00:14,103  WARNING  Deliberate failure test: Missing CRS: deliberate_test_dataset
